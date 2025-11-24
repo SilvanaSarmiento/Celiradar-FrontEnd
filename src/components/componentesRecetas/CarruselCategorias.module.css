@@ -1,0 +1,153 @@
+@import "../../styles/general.css";
+
+
+/* Contenedor principal */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 80px);
+  margin: 2rem auto;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+/* Mensajes */
+.loading,
+.error,
+.empty {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Área interna */
+.carouselInner {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Wrapper por tarjeta */
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40%; /* deja espacio para mostrar 2 tarjetas */
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+/* Botón que contiene la card - transparente */
+.card {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  background: transparent; /* sin fondo negro */
+  color: inherit;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* cuando está seleccionada */
+.selectedCard {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(124,180,130,0.12);
+  outline-offset: 4px;
+  outline: 3px solid rgba(124,180,130,0.12);
+}
+
+/* Wrap para la imagen dentro del botón */
+.cardImageWrap {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+/* Imagen centrada y visible por completo */
+.image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* muestra la imagen completa */
+  object-position: center center;
+  transition: transform 0.45s ease;
+}
+
+/* efecto hover: agranda sutilmente la imagen, no el fondo */
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+/* Etiqueta / label debajo */
+.cardLabel {
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+  font-weight: 600;
+  background: transparent;
+  color: var(--texto, #333);
+  z-index: 2;
+}
+
+/* Flechas: sin fondo negro, discretas */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent, #6ea96b);
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+.arrowLeft { left: 0.5rem; }
+.arrowRight { right: 0.5rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card {
+    height: 220px;
+  }
+  .cardWrapper {
+    min-width: 85%;
+    max-width: 90%;
+  }
+  .carouselInner {
+    flex-direction: column;
+  }
+  .arrow {
+    display: none;
+  }
+  .carouselContainer {
+    width: calc(100% - 32px);
+    margin: 1rem;
+  }
+}
+

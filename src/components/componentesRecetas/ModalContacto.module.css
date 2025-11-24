@@ -1,0 +1,139 @@
+@import "../../styles/general.css";
+
+
+/* Fondo oscuro del modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Contenedor principal */
+.modalContainer {
+  background-color: var(--gris-claro);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  text-align: center;
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Botón cerrar */
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--verde-oscuro);
+  transition: transform 0.2s;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2);
+}
+
+/* Título */
+.modalContainer h2 {
+  margin-top: 0;
+  color: var(--verde-oscuro);
+  font-size: 1.8rem;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 1rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+}
+
+/* Inputs y textarea */
+.modalContainer input,
+.modalContainer textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--verde-principal);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.modalContainer input:focus,
+.modalContainer textarea:focus {
+  border-color: var(--verde-oscuro);
+  box-shadow: 0 0 6px var(--verde-principal);
+}
+
+/* Botón Enviar */
+.submitBtn {
+  background-color: var(--verde-principal);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submitBtn:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.03);
+}
+
+/* Botón de contacto */
+.contactoBtn {
+  background-color: var(--verde-principal);
+  color: var(--blanco);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contactoBtn:hover {
+  background-color: var(--verde-oscuro);
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
