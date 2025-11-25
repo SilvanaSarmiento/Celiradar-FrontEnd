@@ -1,0 +1,246 @@
+<<<<<<< HEAD
+@import "../../styles/general.css";
+
+=======
+@import "../styles/general.css";
+>>>>>>> yamila-dev
+
+/* Contenedor principal */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 80px);
+  margin: 2rem auto;
+  overflow: hidden;
+<<<<<<< HEAD
+  gap: 1rem;
+}
+
+/* Mensajes */
+.loading,
+.error,
+.empty {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+=======
+>>>>>>> yamila-dev
+}
+
+/* Área interna */
+.carouselInner {
+  display: flex;
+<<<<<<< HEAD
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Wrapper por tarjeta */
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40%; /* deja espacio para mostrar 2 tarjetas */
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+/* Botón que contiene la card - transparente */
+.card {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  background: transparent; /* sin fondo negro */
+  color: inherit;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* cuando está seleccionada */
+.selectedCard {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(124,180,130,0.12);
+  outline-offset: 4px;
+  outline: 3px solid rgba(124,180,130,0.12);
+}
+
+/* Wrap para la imagen dentro del botón */
+.cardImageWrap {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+/* Imagen centrada y visible por completo */
+.image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* muestra la imagen completa */
+  object-position: center center;
+  transition: transform 0.45s ease;
+}
+
+/* efecto hover: agranda sutilmente la imagen, no el fondo */
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+/* Etiqueta / label debajo */
+.cardLabel {
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+  font-weight: 600;
+  background: transparent;
+  color: var(--texto, #333);
+  z-index: 2;
+}
+
+/* Flechas: sin fondo negro, discretas */
+=======
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+/* Tarjetas */
+.card {
+  position: relative;
+  width: 48%;
+  height: 300px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+/* Imagen centrada y resaltada */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.6s ease;
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* Flechas */
+>>>>>>> yamila-dev
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+<<<<<<< HEAD
+  color: var(--accent, #6ea96b);
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+.arrowLeft { left: 0.5rem; }
+.arrowRight { right: 0.5rem; }
+=======
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrowLeft {
+  left: 1rem;
+}
+
+.arrowRight {
+  right: 1rem;
+}
+>>>>>>> yamila-dev
+
+/* Responsive */
+@media (max-width: 900px) {
+  .card {
+<<<<<<< HEAD
+    height: 220px;
+  }
+  .cardWrapper {
+    min-width: 85%;
+    max-width: 90%;
+  }
+  .carouselInner {
+    flex-direction: column;
+  }
+  .arrow {
+    display: none;
+  }
+  .carouselContainer {
+    width: calc(100% - 32px);
+    margin: 1rem;
+  }
+}
+
+=======
+    width: 85%;
+    height: 220px;
+  }
+
+  .carouselInner {
+    flex-direction: column;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+>>>>>>> yamila-dev

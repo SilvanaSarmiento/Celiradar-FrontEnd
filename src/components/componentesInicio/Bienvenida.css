@@ -1,0 +1,21 @@
+.bienvenida {
+  text-align: center;
+  margin: 50px auto;
+  flex: 1;
+}
+
+.bienvenida .logo-central {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.bienvenida h1 {
+  font-size: 2.5rem;
+  color: var(--verde-principal);
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  font-size: 1.2rem;
+}

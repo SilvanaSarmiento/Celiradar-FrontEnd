@@ -1,0 +1,88 @@
+<<<<<<< HEAD
+@import "../../styles/general.css";
+
+=======
+@import '../styles/general.css';
+>>>>>>> yamila-dev
+
+.consejosSection {
+  padding: 30px 15px;
+  background: var(--gris-claro);
+}
+
+.consejosContent {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', sans-serif;
+  color: var(--texto);
+}
+
+.consejosTitle {
+  color: var(--verde-oscuro);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.consejosIntro {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.consejosBloques {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloque {
+  background: var(--gris-claro);
+  border-left: 6px solid var(--verde-principal);
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.bloque:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bloque h3 {
+  color: var(--verde-oscuro);
+  margin-bottom: 8px;
+}
+
+.bloque ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.bloque p {
+  margin-top: 5px;
+}
+
+.mensaje {
+  text-align: center;
+  color: var(--verde-oscuro);
+  background: var(--gris-claro);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .consejosContent {
+    padding: 20px;
+  }
+
+  .bloque {
+    padding: 12px;
+  }
+}

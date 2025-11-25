@@ -1,0 +1,28 @@
+.comentarios {
+  margin-top: 1rem;
+}
+
+.comentarios h3 {
+  margin-bottom: 0.5rem;
+  color: #034317;
+}
+
+.comentarios ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comentarios li {
+  background-color: #e0f3e2;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #1f3523;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .comentarios li {
+    font-size: 0.9rem;
+  }
+}

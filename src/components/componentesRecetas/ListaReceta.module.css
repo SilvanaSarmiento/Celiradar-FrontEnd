@@ -1,0 +1,205 @@
+<<<<<<< HEAD
+@import "../../styles/general.css";
+
+
+/* contenedor principal */
+.recipeList {
+  display: grid;
+  gap: 18px;
+  padding: 14px;
+  grid-template-columns: 1fr;
+}
+
+/* tarjeta */
+.recipeCard {
+  background: var(--blanco, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(8, 10, 15, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.recipeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(8, 10, 15, 0.08);
+}
+
+/* cuerpo de la tarjeta */
+.cardBody {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* contenido principal (izq) */
+.cardMain {
+  flex: 1;
+}
+
+/* acciones (der) */
+.cardActions {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+/* titulos y textos */
+.title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: var(--verde-oscuro, #176a5a);
+  font-weight: 600;
+}
+
+.category {
+  margin: 0 0 10px;
+  color: #5a6b63;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* secciones */
+.section {
+  margin-top: 8px;
+}
+
+.list {
+  margin: 6px 0 0 18px;
+  line-height: 1.45;
+}
+
+.pre {
+  white-space: pre-wrap;
+  margin-top: 6px;
+  line-height: 1.45;
+  color: var(--texto, #333);
+}
+
+/* mensajes globales */
+.mensaje {
+  text-align: center;
+  color: var(--verde-oscuro, #176a5a);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.02rem;
+  background: var(--gris-claro, #f8f9f9);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.mensajeError {
+  text-align: center;
+  color: #b00020;
+  background: #fff5f6;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(176,0,32,0.08);
+}
+
+/* boton favorito */
+.favButton {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: transparent;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+.favButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(12, 20, 30, 0.06);
+}
+.favButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* estado favorito ON */
+.favOn {
+  background: linear-gradient(180deg, #fff4f6, #fff0f2);
+  border-color: rgba(255,0,70,0.12);
+}
+
+/* responsive: grid en pantallas grandes */
+@media (min-width: 900px) {
+  .recipeList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .recipeCard {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cardBody {
+    flex-direction: row;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .recipeList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+=======
+@import '../styles/general.css';
+
+.recipeList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+/* Tarjeta de cada receta */
+.recipeCard {
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  color: var(--texto);
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.recipeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.recipeCard h3 {
+  color: var(--verde-oscuro);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.recipeCard p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.autor {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Mensaje cuando no hay recetas */
+.mensaje {
+  text-align: center;
+  color: var(--verde-oscuro);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  background: var(--gris-claro);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+>>>>>>> yamila-dev
+}

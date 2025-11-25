@@ -1,0 +1,43 @@
+.favoritos {
+  margin-top: 1rem;
+}
+
+.favoritos h3 {
+  margin-bottom: 0.5rem;
+  color: #034317;
+}
+
+.favoritos ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.favoritos li {
+  background-color: #e0f3e2;
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  color: #1f3523;
+}
+
+.favoritos button {
+  background-color: #7cb482;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.favoritos button:hover {
+  background-color: #034317;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .favoritos button {
+    width: 100%;
+  }
+}

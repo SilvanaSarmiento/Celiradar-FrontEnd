@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde-principal);
+  padding: 10px 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-links a.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.botones-login button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #fff;
+  background-color: #034317;
+  transition: 0.3s;
+}
+
+.botones-login button:hover {
+  background-color: #022810;
+}

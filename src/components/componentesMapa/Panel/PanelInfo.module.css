@@ -1,0 +1,24 @@
+.galeria {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.galeriaImg {
+  height: 120px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.galeria::-webkit-scrollbar {
+  height: 6px;
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background: #7cb482;
+  border-radius: 4px;
+}

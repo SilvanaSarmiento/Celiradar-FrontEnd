@@ -1,0 +1,95 @@
+:root {
+  --verde-suave: #a9f3a1;
+  --verde-principal: #7cb482;
+  --verde-oscuro: #034317;
+  --gris-claro: #f2f2f2;
+  --blanco: #ffffff;
+  --texto: #1f3523;
+}
+
+/* =========================
+   MENÚ HORIZONTAL SUPERIOR
+========================= */
+.menuHorizontal {
+  width: 100%;
+  background: var(--verde-principal);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 50;
+}
+
+/* =========================
+   LINKS DE NAVEGACIÓN
+========================= */
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  color: var(--blanco);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.navLinks a:hover {
+  background: var(--verde-oscuro);
+}
+
+/* =========================
+   LOGO + TEXTO
+========================= */
+.logoContenedor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImg {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.logoTexto {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 12px;
+  }
+
+  .logoTexto {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    display: none; /* Ocultar menú para móviles si querés después agregar hamburguesa */
+  }
+
+  .logoImg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logoTexto {
+    font-size: 17px;
+  }
+}

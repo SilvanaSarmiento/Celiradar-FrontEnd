@@ -1,0 +1,228 @@
+<<<<<<< HEAD
+@import "../../styles/general.css";
+
+
+/* contenedor principal */
+.recipeForm {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fdf6 100%);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(8, 10, 15, 0.06);
+  max-width: 760px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--texto, #222);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* título */
+.heading {
+  text-align: center;
+  color: var(--verde-oscuro, #176a5a);
+  font-size: 1.35rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* mensajes */
+.error {
+  background: #fff1f2;
+  color: #b00020;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(176,0,32,0.06);
+  font-weight: 600;
+}
+.msg {
+  background: #f3fff7;
+  color: var(--verde-oscuro, #176a5a);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(30,140,90,0.06);
+  font-weight: 600;
+}
+
+/* campo (label wrapper) */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* texto de label */
+.labelText {
+  font-size: 0.95rem;
+  color: #4b554f;
+  font-weight: 600;
+}
+
+/* inputs y textarea */
+.input,
+.textarea,
+.select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fff;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+  font-family: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.select {
+  height: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+}
+
+/* textarea */
+.textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* focus */
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--verde-principal, #2fa36f);
+  box-shadow: 0 6px 18px rgba(47,163,111,0.06);
+  outline: none;
+}
+
+/* acciones */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* boton */
+.button {
+  background: var(--verde-principal, #2fa36f);
+  color: var(--blanco, #fff);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+  width: 100%;
+  max-width: 260px;
+}
+.button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(43, 124, 84, 0.12);
+}
+.button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* efectos al pasar el mouse sobre todo el form */
+.recipeForm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(8, 10, 15, 0.08);
+}
+
+/* responsive */
+@media (min-width: 900px) {
+  .recipeForm {
+    padding: 28px;
+  }
+  .actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+=======
+@import "../styles/general.css";
+
+/* Contenedor principal */
+.recipeForm {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fdf6 100%);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Inter', sans-serif;
+  color: var(--texto);
+  transition: all 0.3s ease;
+}
+
+/* Título */
+.recipeForm h2 {
+  text-align: center;
+  color: var(--verde-oscuro);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Campos del formulario */
+.recipeForm input,
+.recipeForm select,
+.recipeForm textarea {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1.1rem;
+  width: 100%;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover y focus */
+.recipeForm input:focus,
+.recipeForm select:focus,
+.recipeForm textarea:focus {
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 5px rgba(34, 139, 34, 0.3);
+  outline: none;
+}
+
+/* Textareas más amplios */
+.recipeForm textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón */
+.recipeForm button {
+  background: var(--verde-principal);
+  color: var(--blanco);
+  border: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.recipeForm button:hover {
+  background: var(--verde-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pequeña animación al pasar el mouse sobre la tarjeta */
+.recipeForm:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+>>>>>>> yamila-dev
+}

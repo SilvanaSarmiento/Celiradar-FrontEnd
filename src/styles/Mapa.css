@@ -1,0 +1,163 @@
+/* =========================
+   COLORES PRINCIPALES
+========================= */
+:root {
+  --verde-suave: #a9f3a1;
+  --verde-principal: #7cb482;
+  --verde-oscuro: #034317;
+  --gris-claro: #f2f2f2;
+  --blanco: #ffffff;
+  --texto: #1f3523;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gris-claro);
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+}
+
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+.mapa-contenedor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   MENÚ HORIZONTAL (superior)
+========================= */
+.menu-horizontal {
+  width: 100%;
+  background: var(--verde-principal);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* =========================
+   BARRA SUPERIOR (filtros y búsqueda)
+========================= */
+.barra-superior {
+  width: 100%;
+  background: var(--blanco);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--verde-principal);
+  z-index: 9;
+}
+
+.barra-superior button {
+  padding: 7px 12px;
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.barra-superior button:hover {
+  background: #022b0f;
+}
+
+.barra-superior input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--verde-principal);
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+.contenido-principal {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   MAPA
+========================= */
+.mapa {
+  flex: 1;
+  height: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* =========================
+   PANEL INFO (derecha)
+========================= */
+.panel-info {
+  width: 320px;
+  background: var(--blanco);
+  border-left: 2px solid var(--verde-principal);
+  padding: 16px;
+  overflow-y: auto;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.panel-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--verde-oscuro);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: var(--verde-principal);
+  padding: 12px;
+  text-align: center;
+  color: var(--blanco);
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .panel-info {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .panel-info {
+    width: 100%;
+    height: 260px;
+    border-left: none;
+    border-top: 2px solid var(--verde-principal);
+  }
+}
+
